@@ -1,0 +1,187 @@
+/* Stijl voor het gehele document */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Stijl voor de kop van de pagina */
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* Stijl voor het formulier */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Stijl voor de labels van de formulier elementen */
+label {
+  display: inline-block;
+  width: 220px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Stijl voor de tekstvelden van het formulier */
+input[type="text"],
+input[type="number"] {
+  display: inline-block;
+  width: 200px;
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #0071c5;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #005dab;
+}
+
+
+input[type="checkbox"] {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #999;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #fff;
+  background-color: green;
+  border-color: green;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "\2714";
+}
+
+.button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #0071c5;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #005dab;
+}
+
+/* Stijl voor de knop van het formulier */
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+/* Stijl voor de foutmeldingen van het formulier */
+input:invalid {
+  border: 1px solid red;
+}
+
+/* Stijl voor de titel van de foutmeldingen van het formulier */
+input:invalid::before {
+  content: "⚠ ";
+}
+
+/* Stijl voor de checkbox labels */
+label[for="password_exchange"],
+label[for="two_factor"],
+label[for="emergency_access"],
+label[for="document_vault"],
+label[for="custom_location"],
+label[for="open_source"],
+label[for="direct_debit"],
+label[for="credit_card"],
+label[for="ideal"],
+label[for="paypal"] {
+  font-weight: normal;
+}
+
+/* Stijl voor de waarschuwingstekst bij de checkboxen */
+.warning {
+  font-size: 12px;
+  color: #888;
+}
+
+table {
+    background-color: white;
+    border-collapse: collapse;
+    width: 800px;
+    height: 500px;
+    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+th {
+    background-color: #34495e;
+    color: white;
+}

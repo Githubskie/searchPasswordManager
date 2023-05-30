@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+    <title>Password Manager Tool</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styleHome.css') }}">
+</head>
+<body>
+    <h1>Password Manager</h1>
+    <div class="button-container">
+        <a href="/add"><button class="button">Add</button></a>
+        <a href="/search"><button class="button">Search</button></a>
+        <a href="{{ url_for('delete_password_manager') }}"><button class="button">Delete</button></a>
+
+    </div>
+</body>
+</html>

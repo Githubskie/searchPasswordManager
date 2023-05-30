@@ -1,0 +1,220 @@
+/* Stijl voor het gehele document */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+}
+
+/* Stijl voor de kop van de pagina */
+h1 {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* Stijl voor het formulier */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+  border: 1px solid #eee;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+/* Stijl voor de labels van de formulier elementen */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+
+/* Stijl voor de tekstvelden van het formulier */
+input[type="text"],
+input[type="number"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #eee;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #fff;
+  background-color: #2c3e50;
+  border-color: #2c3e50;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "\2714";
+}
+
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+/* Stijl voor de success alert box */
+.alert-success {
+color: #155724;
+background-color: #d4edda;
+border-color: #c3e6cb;
+}
+
+/* Stijl voor de error alert box */
+.alert-danger {
+color: #721c24;
+background-color: #f8d7da;
+border-color: #f5c6cb;
+}
+
+/* Stijl voor de waarschuwing alert box */
+.alert-warning {
+color: #856404;
+background-color: #fff3cd;
+border-color: #ffeeba;
+}
+
+/* Stijl voor de informatie alert box */
+.alert-info {
+color: #0c5460;
+background-color: #d1ecf1;
+border-color: #bee5eb;
+}
+
+/* Stijl voor de sluitknop van de alert box */
+.close {
+float: right;
+font-size: 22px;
+font-weight: bold;
+line-height: 1;
+color: #000;
+text-shadow: 0 1px 0 #fff;
+opacity: 0.2;
+transition: opacity 0.3s ease-in-out;
+}
+
+.close:hover {
+color: #000;
+text-decoration: none;
+opacity: 0.5;
+}
+
+.close:focus,
+.close:active {
+outline: none;
+}
+
+/* Stijl voor de iconen */
+.fa {
+display: inline-block;
+font-size: 24px;
+margin-right: 5px;
+}
+
+/* Stijl voor het overlay scherm */
+.overlay {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0,0,0,0.5);
+z-index: 9999;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* Stijl voor de pop-up box */
+.popup {
+background-color: #fff;
+padding: 20px;
+border-radius: 5px;
+max-width: 600px;
+margin: 0 auto;
+position: relative;
+}
+
+.popup h2 {
+margin-top: 0;
+font-size: 24px;
+font-weight: bold;
+color: #2c3e50;
+}
+
+.popup p {
+margin-bottom: 20px;
+font-size: 16px;
+line-height: 1.5;
+color: #2c3e50;
+}
+
+.popup .close {
+position: absolute;
+top: 10px;
+right: 10px;
+opacity: 1;
+}
+
+.popup .close:hover {
+color: #000;
+text-decoration: none;
+opacity: 0.5;
+}

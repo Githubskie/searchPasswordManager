@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Manager Selector Tool - Search Results</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styleTable.css') }}">
+
+</head>
+<body>
+    <h1>Search Results</h1>
+    {% if results %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Functionality Rating</th>
+                    <th>Usability Rating</th>
+                    <th>Security Rating</th>
+                    <th>Password Exchange</th>
+                    <th>Two-Factor Authentication</th>
+                    <th>Emergency Access</th>
+                    <th>Document Vault</th>
+                    <th>Custom Location</th>
+                    <th>Password Vault</th>
+                    <th>Open Source</th>
+                    <th>Direct Debit</th>
+                    <th>Credit Card</th>
+                    <th>iDeal</th>
+                    <th>PayPal</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in results %}
+                    <tr>
+                        <td>{{ row[0] }}</td>
+                        <td>{{ row[1] }}</td>
+                        <td>{{ row[2] }}</td>
+                        <td>{{ row[3] }}</td>
+                        <td>{% if row[4] == "1" %}Yes{% else %}No{% endif %}</td>
+                        <td>{% if row[5] == "1" %}Yes{% else %}No{% endif %}</td>
+                        <td>{% if row[6] == "1" %}Yes{% else %}No{% endif %}</td>
+                        <td>{% if row[7] == "1" %}Yes{% else %}No{% endif %}</td>
+                        <td>{% if row[8] == "1" %}Yes{% else %}No{% endif %}</td>
+                        <td>{% if row[9] == "1" %}Yes{% else %}No{% endif %}</td>
+                        <td>{% if row[10] == "1" %}Yes{% else %}No{% endif %}</td>
+                        <td>{% if row[11] == "1" %}Yes{% else %}No{% endif %}</td>
+                        <td>{% if row[12] == "1" %}Yes{% else %}No{% endif %}</td>
+                        <td>{% if row[13] == "1" %}Yes{% else %}No{% endif %}</td>
+                        <td>{% if row[14] == "1" %}Yes{% else %}No{% endif %}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No password managers found.</p>
+    {% endif %}
+</body>
+</html>

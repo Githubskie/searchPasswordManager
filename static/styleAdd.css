@@ -1,0 +1,146 @@
+/* Stijl voor het gehele document */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+}
+
+/* Stijl voor de kop van de pagina */
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* Stijl voor het formulier */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+  border: 1px solid #eee;
+  padding: 30px;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+
+
+/* Stijl voor de labels van de formulier elementen */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+
+/* Stijl voor de tekstvelden van het formulier */
+input[type="text"],
+input[type="number"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #eee;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #2c3e50;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Stijl voor de checkboxes */
+input[type="checkbox"] + label {
+  display: flex;
+  align-items: center;
+}
+
+/* Stijl voor de checkbox-elementen */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Stijl voor het pictogram van de checkbox */
+input[type="checkbox"] + label::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+/* Stijl voor de geselecteerde checkbox */
+input[type="checkbox"]:checked + label::before {
+  content: "\2714";
+  color: #fff;
+  background-color: #2c3e50;
+  text-align: center;
+  line-height: 24px;
+}
+
+#add-password-btn {
+  display: block;
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.alert.alert-success {
+  display: block;
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+}

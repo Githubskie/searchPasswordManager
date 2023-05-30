@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Password Manager Selector Tool</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styleSearch.css') }}">
+	<script type="text/javascript" src="{{ url_for('static', filename='search.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='search.js') }}"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+	<h1>Welcome to the Password Manager Selector Tool</h1>
+
+	<form action="submit_form" method="post" id="password-manager-form">
+		<h2>What do you value most in a password manager (1 choice)?</h2>
+		<div class="radio-group">
+			<label class="radio-button">
+				<input type="radio" name="value" value="Functionality">
+				<span>Functionality</span>
+			</label>
+			<label class="radio-button">
+				<input type="radio" name="value" value="Usability">
+				<span>Usability</span>
+			</label>
+			<label class="radio-button">
+				<input type="radio" name="value" value="Security">
+				<span>Security</span>
+			</label>
+		</div>
+
+		<h2>Select what's important (multiple choice):</h2>
+		<div class="checkbox-group">
+			<label class="checkbox">
+				<input type="checkbox" name="important[]" value="Password exchange across all your devices">
+				<span>Password exchange across all your devices</span>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" name="important[]" value="Two-factor authentication">
+				<span>Two-factor authentication</span>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" name="important[]" value="Emergency access">
+				<span>Emergency access</span>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" name="important[]" value="Document vault">
+				<span>Document vault</span>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" name="important[]" value="Custom location password vault">
+				<span>Custom location password vault</span>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" name="important[]" value="Open source">
+				<span>Open source</span>
+			</label>
+		</div>
+
+		<h2>Select a payment method (multiple choice):</h2>
+		<div class="checkbox-group">
+			<label class="checkbox">
+				<input type="checkbox" name="payment_methods[]" value="Direct debit">
+				<span>Direct debit</span>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" name="payment_methods[]" value="Credit card">
+				<span>Credit card</span>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" name="payment_methods[]" value="iDeal">
+				<span>iDeal</span>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" name="payment_methods[]" value="PayPal">
+				<span>PayPal</span>
+			</label>
+		</div>
+    		<label class="button">
+        <input type="button" value="Submit" onclick="searchPasswordManager()">
+    		</label>
+	</form>
+
+	<ul>
+	{% for result in results %}
+		<li>{{ result[0] }} - {{ result[1] }} - {{ result[2] }} - {{ result[3] }}</li>
+	{% endfor %}
+	</ul>
+</body>
+</html>
+
